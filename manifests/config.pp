@@ -1,7 +1,7 @@
 class snmpd::config {
   file { $snmpd::params::service_config:
-    owner   => 'root',
-    group   => 'root',
+    owner   => $snmpd::params::config_owner,
+    group   => $snmpd::params::config_group,
     mode    => '0640',
     content => template("snmpd/${snmpd::params::service_config_template}"),
     require => Class['snmpd::install'],
