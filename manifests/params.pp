@@ -9,7 +9,7 @@ class snmpd::params {
       $default_config_source = 'debian/default_snmpd'
     }
     freebsd: {
-      $package_name = 'net-mgmt/bsnmp-ucd'
+      $package_name = 'bsnmp-ucd'
       $service_config = '/etc/snmpd.config'
       $service_config_template = 'freebsd/snmpd.config.erb'
       $service_name = 'bsnmpd'
