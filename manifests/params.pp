@@ -16,7 +16,7 @@ class snmpd::params {
       $service_config_template = 'freebsd/snmpd.config.erb'
       $service_name = 'bsnmpd'
       $config_owner = 'root'
-      $config_group = 'root'
+      $config_group = 'wheel'
     }
     default: {
       case $::operatingsystem {
