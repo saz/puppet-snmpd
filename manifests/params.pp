@@ -15,9 +15,9 @@ class snmpd::params {
     }
     default: {
       case $::operatingsystem {
-      }
-      default: {
-        fail("Unsupported platform: ${::osfamily}/${::operatingsystem}")
+        default: {
+          fail("Unsupported platform: ${::osfamily}/${::operatingsystem}")
+        }
       }
     }
   }
