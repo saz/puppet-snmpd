@@ -10,7 +10,8 @@ class snmpd::params {
     }
     freebsd: {
       $package_name = 'net-mgmt/bsnmp-ucd'
-      $service_config = '/etc/snmp/snmpd.conf'
+      $service_config = '/etc/snmpd.config'
+      $service_config_template = 'freebsd/snmpd.config.erb'
       $service_name = 'bsnmpd'
     }
     default: {
