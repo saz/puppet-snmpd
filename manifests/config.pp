@@ -13,7 +13,7 @@ class snmpd::config {
       owner   => 'root',
       group   => 'root',
       mode    => '0640',
-      source  => "puppet:///modules/snmpd/${snmpd::params::default_config_source}"),
+      source  => "puppet:///modules/snmpd/${snmpd::params::default_config_source}",
       require => Class['snmpd::install'],
       notify  => Class['snmpd::service'],
     }
