@@ -13,12 +13,12 @@ class snmpd::params {
       $service_config = '/etc/snmp/snmpd.conf'
       $service_name = 'bsnmpd'
     }
-  }
-  default: {
-    case $::operatingsystem {
-    }
     default: {
-      fail("Unsupported platform: ${::osfamily}/${::operatingsystem}")
+      case $::operatingsystem {
+      }
+      default: {
+        fail("Unsupported platform: ${::osfamily}/${::operatingsystem}")
+      }
     }
   }
 }
