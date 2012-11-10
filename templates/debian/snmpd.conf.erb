@@ -1,9 +1,9 @@
 # File managed by puppet
 
-rocommunity <%= scope.lookupvar('snmpd::params::ro_community') %> <%= scope.lookupvar('snmpd::params::ro_network') %>
-rwcommunity <%= scope.lookupvar('snmpd::params::rw_community') %> <%= scope.lookupvar('snmpd::params::rw_network') %>
+rocommunity <%= ro_community %> <%= ro_network %>
+rwcommunity <%= rw_community %> <%= rw_network %>
 disk / 90%
 
 sysservices 76
-syscontact <%= scope.lookupvar('snmpd::params::contact') %>
-syslocation <%= scope.lookupvar('snmpd::params::location') %>
+syscontact <%= contact %>
+syslocation <%= location %>
